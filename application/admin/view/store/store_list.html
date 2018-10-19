@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="shortcut icon" href="__STATIC__/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="__STATIC__/admin/css/font.css">
+    <link rel="stylesheet" href="__STATIC__/admin/css/xadmin.css">
+	<link rel="stylesheet" href="__STATIC__/admin/lib/layui/css/layui.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="__STATIC__/admin/js/xadmin.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+	  layui.use('table', function(){
+        var table = layui.table;
+        });
+
+       /*用户-停用*/
+      function member_stop(obj,id){
+          layer.confirm('确认要停用吗？',function(index){
+
+              if($(obj).attr('title')=='启用'){
+
+                //发异步把用户状态进行更改
+                $(obj).attr('title','停用')
+                $(obj).find('i').html('&#xe62f;');
+
+                $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
+                layer.msg('已停用!',{icon: 5,time:1000});
+
+              }else{
+                $(obj).attr('title','启用')
+                $(obj).find('i').html('&#xe601;');
+
+                $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
+                layer.msg('已启用!',{icon: 5,time:1000});
+              }
+              
+          });
+      }
+
+      /*用户-删除*/
+      function member_del(obj,id){
+          layer.confirm('确认要删除吗？',function(index){
+              //发异步删除数据
+			  $.get("{:url('delete')}",{id:id});
+              $(obj).parents("tr").remove();
+              layer.msg('已删除!',{icon:1,time:1000});
+          });
+      }
+	  
+    </script>
+  </head>
+  <script>
+      let index = parent.layer.getFrameIndex(window.name);
+      parent.layer.close(index);
+      parent.location.reload();
+  </script>
+  <body>
+    <div class="x-nav">
+      <span class="layui-breadcrumb">
+        <a href="">首页</a>
+        <a href="">商铺管理</a>
+      </span>
+      <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace('index')" title="刷新">
+        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+    </div>
+    <div class="x-body">
+      <div class="layui-row">
+        <form class="layui-form layui-col-md12 x-so" type="POST" action="{:url('search')}">
+          <div class="layui-input-inline">
+            <select name="status">
+              <option value="">商铺状态</option>
+              <option value="0">空铺</option>
+              <option value="1">签约</option>
+			  <option value="2">装修</option>
+			  <option value="3">入驻</option>
+			  <option value="4">清退</option>
+			  <option value="5">退铺</option>
+			  <option value="6">作废</option>
+            </select>
+          </div>
+          <input type="text" id="berth_name" name="berth_name"  placeholder="请输入商铺名称" autocomplete="off" class="layui-input">
+          <button class="layui-btn"  lay-submit="" lay-filter="sreach" type="submit"><i class="layui-icon">&#xe615;</i></button>
+        </form>
+      </div>
+      <xblock>
+        <button class="layui-btn" onclick=x_admin_show('商铺添加','{:url("create")}',990,460)><i class="layui-icon"></i>添加</button>
+        <span class="x-right" style="line-height:40px">共有数据：{$count} 条</span>
+      </xblock>
+	  <div class="table-container">
+      <table class="layui-table" lay-data="" lay-size="sm">
+        <thead>
+          <tr>
+			<th lay-data="{field:'id',width:60,sort: true}">ID</th>
+            <th lay-data="{field:'berth_code',width:90,sort: true}">铺位代码</th>
+            <th lay-data="{field:'berth_name',width:120}">铺位名称</th>
+            <th lay-data="{field:'building_number',width:120}">楼号</th>
+            <th lay-data="{field:'floor',width:60}">楼层</th>
+            <th lay-data="{field:'floor_area',width:110,sort: true}">建筑面积(㎡)</th>
+            <th lay-data="{field:'utilization_area',width:110,sort: true}">使用面积(㎡)</th>
+            <th lay-data="{field:'billing_area',width:110,sort:true}">计费面积(㎡)</th>
+			<th lay-data="{field:'reference_rent',width:120,sort:true}">参考租金(㎡/元)</th>
+			<th lay-data="{field:'contract_date',width:100,sort:true}">签约时间</th>
+			<th lay-data="{field:'description',width:120}">备注</th>
+			<th lay-data="{field:'status',width:70,sort:true}">状态</th>
+			<th lay-data="{field:'operate',width:70}">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+          {volist name='store_info' id='vo'}
+          <tr>
+            <td>{$vo.id}</td>
+            <td>{$vo.berth_code}</td>
+            <td>{$vo.berth_name}</td>
+            <td>{$vo.building_number}</td>
+            <td>{$vo.floor}</td>
+			<td>{$vo.floor_area}</td>
+            <td>{$vo.utilization_area}</td>
+            <td>{$vo.billing_area}</td>
+            <td>{$vo.reference_rent}</td>
+			<td>{$vo.contract_date}</td>
+			<td>{$vo.description}</td>
+			<td class="td-status">
+              {if condition="$vo.status==0"}
+              <span id="aa" class="layui-btn layui-btn-warm layui-btn-mini">空铺</span>
+			  {/if}
+			  {if condition="$vo.status==1"}
+			   <span id="ab" class="layui-btn layui-btn-normal layui-btn-mini">签约</span>
+			  {/if}
+			  {if condition="$vo.status==2"}
+			   <span id="ac" class="layui-btn layui-btn-normal layui-btn-mini">装修</span>
+			  {/if}
+			  {if condition="$vo.status==3"}
+              <span id="ad" class="layui-btn layui-btn-mini">入驻</span>
+			  {/if}
+			  {if condition="$vo.status==4"}
+			   <span id="ae" class="layui-btn layui-btn-danger layui-btn-mini">清退</span>
+			  {/if}
+			  {if condition="$vo.status==5"}
+			   <span id="af" class="layui-btn layui-btn-danger layui-btn-mini">退铺</span>
+			  {/if}
+			  {if condition="$vo.status==6"}
+			   <span id="ag" class="layui-btn layui-btn-primary layui-btn-mini">作废</span>
+			  {/if}
+			</td>
+            <td class="td-manage">		  
+			  <a title="编辑"  onclick=x_admin_show('商铺修改','{:url("edit")}'+'?id='+"{$vo.id}",990,460) href="javascript:;">
+                <i class="layui-icon">&#xe642;</i>
+              </a>
+              <a title="删除" onclick="member_del(this,'{$vo.id}')" href="javascript:;">
+                <i class="layui-icon">&#xe640;</i>
+              </a>
+            </td>
+          </tr>
+		{/volist}
+        </tbody>
+       </table>
+    </div>
+    </div>
+  </body>
+</html>

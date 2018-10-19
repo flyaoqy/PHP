@@ -1,0 +1,3405 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List href="XML配置文件解析.files/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>liutao</o:Author>
+  <o:LastAuthor>liutao</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>266</o:TotalTime>
+  <o:Created>2016-03-15T09:22:00Z</o:Created>
+  <o:LastSaved>2016-03-15T09:22:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>628</o:Words>
+  <o:Characters>3584</o:Characters>
+  <o:Lines>29</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4204</o:CharactersWithSpaces>
+  <o:Version>15.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=dataStoreItem href="XML配置文件解析.files/item0001.xml"
+target="XML配置文件解析.files/props002.xml">
+<link rel=themeData href="XML配置文件解析.files/themedata.thmx">
+<link rel=colorSchemeMapping href="XML配置文件解析.files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="371">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1073750139 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"标题 1 Char";
+	mso-style-next:正文;
+	margin-top:17.0pt;
+	margin-right:0cm;
+	margin-bottom:16.5pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:240%;
+	mso-pagination:lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:22.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:22.0pt;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:正文;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:正文;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:正文;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-priority:99;
+	mso-style-link:"页眉 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	border:none;
+	mso-border-bottom-alt:solid windowtext .75pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 1.0pt 0cm;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-priority:99;
+	mso-style-link:"页脚 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	mso-char-indent-count:2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{mso-style-priority:39;
+	mso-style-qformat:yes;
+	mso-style-parent:"标题 1";
+	mso-style-next:正文;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#2E74B5;
+	mso-themecolor:accent1;
+	mso-themeshade:191;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;
+	mso-style-unhide:no;}
+span.1Char
+	{mso-style-name:"标题 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"标题 1";
+	mso-ansi-font-size:22.0pt;
+	mso-bidi-font-size:22.0pt;
+	mso-font-kerning:22.0pt;
+	font-weight:bold;}
+span.html-attribute-name
+	{mso-style-name:html-attribute-name;
+	mso-style-unhide:no;}
+span.html-attribute-value
+	{mso-style-name:html-attribute-value;
+	mso-style-unhide:no;}
+span.html-tag
+	{mso-style-name:html-tag;
+	mso-style-unhide:no;}
+span.text
+	{mso-style-name:text;
+	mso-style-unhide:no;}
+span.html-attribute
+	{mso-style-name:html-attribute;
+	mso-style-unhide:no;}
+span.Char
+	{mso-style-name:"页眉 Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:页眉;
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;}
+span.Char0
+	{mso-style-name:"页脚 Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:页脚;
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri",sans-serif;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;
+	mso-footnote-separator:url("XML配置文件解析.files/header.htm") fs;
+	mso-footnote-continuation-separator:url("XML配置文件解析.files/header.htm") fcs;
+	mso-endnote-separator:url("XML配置文件解析.files/header.htm") es;
+	mso-endnote-continuation-separator:url("XML配置文件解析.files/header.htm") ecs;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:105001252;
+	mso-list-template-ids:1334737910;}
+@list l0:level1
+	{mso-level-start-at:4;
+	mso-level-text:%1;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:28.5pt;
+	text-indent:-28.5pt;}
+@list l0:level2
+	{mso-level-start-at:4;
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:37.5pt;
+	text-indent:-28.5pt;}
+@list l0:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-36.0pt;}
+@list l0:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-54.0pt;}
+@list l0:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:90.0pt;
+	text-indent:-54.0pt;}
+@list l0:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:117.0pt;
+	text-indent:-72.0pt;}
+@list l0:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-72.0pt;}
+@list l0:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:153.0pt;
+	text-indent:-90.0pt;}
+@list l0:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:162.0pt;
+	text-indent:-90.0pt;}
+@list l1
+	{mso-list-id:375786439;
+	mso-list-type:hybrid;
+	mso-list-template-ids:585274492 702452822 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-text:（%1）;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:75.0pt;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:10.5pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:宋体;
+	mso-ascii-theme-font:minor-fareast;
+	mso-hansi-font-family:宋体;
+	mso-hansi-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:windowtext;}
+@list l1:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-21.0pt;}
+@list l1:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:102.0pt;
+	text-indent:-21.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:123.0pt;
+	text-indent:-21.0pt;}
+@list l1:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:-21.0pt;}
+@list l1:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:165.0pt;
+	text-indent:-21.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:186.0pt;
+	text-indent:-21.0pt;}
+@list l1:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:207.0pt;
+	text-indent:-21.0pt;}
+@list l1:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:228.0pt;
+	text-indent:-21.0pt;}
+@list l2
+	{mso-list-id:496305208;
+	mso-list-template-ids:168752426;}
+@list l2:level1
+	{mso-level-start-at:4;
+	mso-level-text:%1;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-39.0pt;
+	mso-bidi-font-family:"Courier New";}
+@list l2:level2
+	{mso-level-start-at:3;
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:96.0pt;
+	text-indent:-39.0pt;
+	mso-bidi-font-family:"Courier New";}
+@list l2:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:153.0pt;
+	text-indent:-39.0pt;
+	mso-bidi-font-family:"Courier New";}
+@list l2:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:225.0pt;
+	text-indent:-54.0pt;
+	mso-bidi-font-family:"Courier New";}
+@list l2:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:282.0pt;
+	text-indent:-54.0pt;
+	mso-bidi-font-family:"Courier New";}
+@list l2:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:357.0pt;
+	text-indent:-72.0pt;
+	mso-bidi-font-family:"Courier New";}
+@list l2:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:414.0pt;
+	text-indent:-72.0pt;
+	mso-bidi-font-family:"Courier New";}
+@list l2:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:489.0pt;
+	text-indent:-90.0pt;
+	mso-bidi-font-family:"Courier New";}
+@list l2:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:546.0pt;
+	text-indent:-90.0pt;
+	mso-bidi-font-family:"Courier New";}
+@list l3
+	{mso-list-id:722145596;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1127998442 1220024284 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-text:%1、;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-18.0pt;}
+@list l3:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;}
+@list l3:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:84.0pt;
+	text-indent:-21.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:105.0pt;
+	text-indent:-21.0pt;}
+@list l3:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-21.0pt;}
+@list l3:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:147.0pt;
+	text-indent:-21.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-21.0pt;}
+@list l3:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:189.0pt;
+	text-indent:-21.0pt;}
+@list l3:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:210.0pt;
+	text-indent:-21.0pt;}
+@list l4
+	{mso-list-id:756441396;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1502420800 -312175680 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l4:level1
+	{mso-level-text:%1、;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:93.0pt;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.5pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:宋体;
+	mso-ascii-theme-font:minor-fareast;
+	mso-hansi-font-family:宋体;
+	mso-hansi-theme-font:minor-fareast;
+	color:windowtext;
+	mso-ansi-font-weight:bold;}
+@list l4:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:117.0pt;
+	text-indent:-21.0pt;}
+@list l4:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:138.0pt;
+	text-indent:-21.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:159.0pt;
+	text-indent:-21.0pt;}
+@list l4:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-21.0pt;}
+@list l4:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:201.0pt;
+	text-indent:-21.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:222.0pt;
+	text-indent:-21.0pt;}
+@list l4:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:243.0pt;
+	text-indent:-21.0pt;}
+@list l4:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:264.0pt;
+	text-indent:-21.0pt;}
+@list l5
+	{mso-list-id:1172988424;
+	mso-list-template-ids:319865034;}
+@list l5:level1
+	{mso-level-start-at:4;
+	mso-level-text:%1;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l5:level2
+	{mso-level-text:"%1\.%2";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:57.0pt;
+	text-indent:-18.0pt;}
+@list l5:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:114.0pt;
+	text-indent:-36.0pt;}
+@list l5:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:171.0pt;
+	text-indent:-54.0pt;}
+@list l5:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:210.0pt;
+	text-indent:-54.0pt;}
+@list l5:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:267.0pt;
+	text-indent:-72.0pt;}
+@list l5:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:306.0pt;
+	text-indent:-72.0pt;}
+@list l5:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:363.0pt;
+	text-indent:-90.0pt;}
+@list l5:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:402.0pt;
+	text-indent:-90.0pt;}
+@list l6
+	{mso-list-id:1202940118;
+	mso-list-type:hybrid;
+	mso-list-template-ids:679093986 2144475102 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l6:level1
+	{mso-level-text:（%1）;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:129.0pt;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:10.5pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:宋体;
+	mso-ascii-theme-font:minor-fareast;
+	mso-hansi-font-family:宋体;
+	mso-hansi-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:windowtext;}
+@list l6:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:135.0pt;
+	text-indent:-21.0pt;}
+@list l6:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:156.0pt;
+	text-indent:-21.0pt;}
+@list l6:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:177.0pt;
+	text-indent:-21.0pt;}
+@list l6:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:198.0pt;
+	text-indent:-21.0pt;}
+@list l6:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:219.0pt;
+	text-indent:-21.0pt;}
+@list l6:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:240.0pt;
+	text-indent:-21.0pt;}
+@list l6:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:261.0pt;
+	text-indent:-21.0pt;}
+@list l6:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:282.0pt;
+	text-indent:-21.0pt;}
+@list l7
+	{mso-list-id:1477409500;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1756334076 810064564 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l7:level1
+	{mso-level-text:%1、;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-18.0pt;}
+@list l7:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;}
+@list l7:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:84.0pt;
+	text-indent:-21.0pt;}
+@list l7:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:105.0pt;
+	text-indent:-21.0pt;}
+@list l7:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-21.0pt;}
+@list l7:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:147.0pt;
+	text-indent:-21.0pt;}
+@list l7:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-21.0pt;}
+@list l7:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:189.0pt;
+	text-indent:-21.0pt;}
+@list l7:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:210.0pt;
+	text-indent:-21.0pt;}
+@list l8
+	{mso-list-id:1579091456;
+	mso-list-template-ids:-1750565252;}
+@list l8:level1
+	{mso-level-start-at:4;
+	mso-level-text:%1;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:28.5pt;
+	text-indent:-28.5pt;}
+@list l8:level2
+	{mso-level-start-at:3;
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:37.5pt;
+	text-indent:-28.5pt;}
+@list l8:level3
+	{mso-level-start-at:4;
+	mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-36.0pt;}
+@list l8:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-54.0pt;}
+@list l8:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:90.0pt;
+	text-indent:-54.0pt;}
+@list l8:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:117.0pt;
+	text-indent:-72.0pt;}
+@list l8:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-72.0pt;}
+@list l8:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:153.0pt;
+	text-indent:-90.0pt;}
+@list l8:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:162.0pt;
+	text-indent:-90.0pt;}
+@list l9
+	{mso-list-id:1753816467;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1862406208 -65868772 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l9:level1
+	{mso-level-number-format:japanese-counting;
+	mso-level-text:%1、;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	mso-ansi-font-size:10.5pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	color:windowtext;}
+@list l9:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l9:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;}
+@list l9:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:84.0pt;
+	text-indent:-21.0pt;}
+@list l9:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:105.0pt;
+	text-indent:-21.0pt;}
+@list l9:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:126.0pt;
+	text-indent:-21.0pt;}
+@list l9:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:147.0pt;
+	text-indent:-21.0pt;}
+@list l9:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-21.0pt;}
+@list l9:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:189.0pt;
+	text-indent:-21.0pt;}
+@list l10
+	{mso-list-id:2073651719;
+	mso-list-template-ids:-1118658912;}
+@list l10:level1
+	{mso-level-start-at:2;
+	mso-level-text:%1;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l10:level2
+	{mso-level-text:"%1\.%2";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:57.0pt;
+	text-indent:-18.0pt;}
+@list l10:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:114.0pt;
+	text-indent:-36.0pt;}
+@list l10:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:171.0pt;
+	text-indent:-54.0pt;}
+@list l10:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:210.0pt;
+	text-indent:-54.0pt;}
+@list l10:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:267.0pt;
+	text-indent:-72.0pt;}
+@list l10:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:306.0pt;
+	text-indent:-72.0pt;}
+@list l10:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:363.0pt;
+	text-indent:-90.0pt;}
+@list l10:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:402.0pt;
+	text-indent:-90.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2049"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ZH-CN link="#0563C1" vlink="#954F72" style='tab-interval:21.0pt;
+text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'><w:Sdt SdtDocPart="t"
+ DocPartType="Table of Contents" DocPartUnique="t" ID="-995035066">
+ <p class=MsoTocHeading><span style='font-family:宋体;mso-ascii-font-family:"Calibri Light";
+ mso-ascii-theme-font:major-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ major-fareast;mso-hansi-font-family:"Calibri Light";mso-hansi-theme-font:major-latin;
+ mso-ansi-language:ZH-CN'>目录</span><span style='font-size:10.5pt;mso-bidi-font-size:
+ 11.0pt;line-height:107%;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+ minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+ "Times New Roman";mso-bidi-theme-font:minor-bidi;color:windowtext;mso-ansi-language:
+ ZH-CN'><w:sdtPr></w:sdtPr></span></p>
+ <p class=MsoToc1 style='tab-stops:42.0pt right dotted 414.8pt'><!--[if supportFields]><span
+ lang=EN-US><span style='mso-element:field-begin'></span><span
+ style='mso-spacerun:yes'>&nbsp;</span>TOC \o &quot;1-3&quot; \h \z \u <span
+ style='mso-element:field-separator'></span></span><![endif]--><span
+ lang=EN-US><a href="#_Toc444868315"><b style='mso-bidi-font-weight:normal'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+ minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-no-proof:
+ yes'><span lang=EN-US>一、</span></span></b><span style='color:windowtext;
+ mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>workflow&nbsp;</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（根标签）</span></span></b><span style='color:windowtext;display:none;
+ mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868315 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300310035000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc1 style='tab-stops:42.0pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868316"><b style='mso-bidi-font-weight:normal'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+ minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-no-proof:
+ yes'><span lang=EN-US>二、</span></span></b><span style='color:windowtext;
+ mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>global</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（全局变量）</span></span></b><span style='color:windowtext;display:none;
+ mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868316 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300310036000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc2 style='tab-stops:52.5pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868317"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-no-proof:yes'>2.1</span></b><span style='color:windowtext;mso-no-proof:
+ yes;text-decoration:none;text-underline:none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>init</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（初始化脚本<span lang=EN-US>）</span></span></span></b><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868317 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300310037000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc2 style='tab-stops:52.5pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868318"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-no-proof:yes'>2.2</span></b><span style='color:windowtext;mso-no-proof:
+ yes;text-decoration:none;text-underline:none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>email</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（邮件配置）</span></span></b><span style='color:windowtext;display:none;
+ mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868318 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300310038000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc2 style='tab-stops:52.5pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868319"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-no-proof:yes'>2.3</span></b><span style='color:windowtext;mso-no-proof:
+ yes;text-decoration:none;text-underline:none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>reject</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（驳回）</span></span></b><span style='color:windowtext;display:none;
+ mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868319 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300310039000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc2 style='tab-stops:52.5pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868320"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-no-proof:yes'>2.4</span></b><span style='color:windowtext;mso-no-proof:
+ yes;text-decoration:none;text-underline:none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>countersign</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（会签）</span></span></b><span style='color:windowtext;display:none;
+ mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868320 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300320030000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc2 style='tab-stops:52.5pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868321"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-no-proof:yes'>2.5</span></b><span style='color:windowtext;mso-no-proof:
+ yes;text-decoration:none;text-underline:none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>organization</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（组织结构处理）</span></span></b><span style='color:windowtext;display:
+ none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868321 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300320031000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc2 style='tab-stops:52.5pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868322"><b style='mso-bidi-font-weight:normal'><span
+ style='mso-no-proof:yes'>2.6</span></b><span style='color:windowtext;
+ mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>each_before</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（每步流程前校验）</span></span></b><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868322 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300320032000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc2 style='tab-stops:52.5pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868323"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-no-proof:yes'>2.7</span></b><span style='color:windowtext;mso-no-proof:
+ yes;text-decoration:none;text-underline:none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>each_after&nbsp;</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（每步流程后处理）</span></span></b><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868323 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300320033000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc1 style='tab-stops:42.0pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868324"><b style='mso-bidi-font-weight:normal'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+ minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-no-proof:
+ yes'><span lang=EN-US>三、</span></span></b><span style='color:windowtext;
+ mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>initial-actions</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（开始节点）</span></span></b><span style='color:windowtext;display:none;
+ mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868324 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300320034000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc1 style='tab-stops:42.0pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868325"><b style='mso-bidi-font-weight:normal'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+ minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-no-proof:
+ yes'><span lang=EN-US>四、</span></span></b><span style='color:windowtext;
+ mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>steps</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（审批节点）</span></span></b><span style='color:windowtext;display:none;
+ mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868325 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300320035000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc2 style='tab-stops:52.5pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868326"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-no-proof:yes'>4.1</span></b><span style='color:windowtext;mso-no-proof:
+ yes;text-decoration:none;text-underline:none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>step</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（审批节点）</span></span></b><span style='color:windowtext;display:none;
+ mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868326 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300320036000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc3 style='tab-stops:84.0pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868327"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-bidi-font-family:"Courier New";mso-no-proof:yes'>4.1.1</span></b><span
+ style='color:windowtext;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New";
+ mso-no-proof:yes'>before-action&nbsp;</span></b><b style='mso-bidi-font-weight:
+ normal'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+ mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+ minor-fareast;mso-bidi-font-family:"Courier New";mso-no-proof:yes'><span
+ lang=EN-US>（上一节点结束时处理）</span></span></b><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868327 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>3<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300320037000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc3 style='tab-stops:84.0pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868328"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-no-proof:yes'>4.1.2</span></b><span style='color:windowtext;mso-no-proof:
+ yes;text-decoration:none;text-underline:none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New";
+ mso-no-proof:yes'>validate</span></b><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-no-proof:yes'>&nbsp;</span></b><b style='mso-bidi-font-weight:normal'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+ mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+ minor-fareast;mso-no-proof:yes'><span lang=EN-US>（审批前校验）</span></span></b><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868328 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>3<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300320038000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc3 style='tab-stops:84.0pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868329"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-bidi-font-family:"Courier New";mso-no-proof:yes'>4.1.3</span></b><span
+ style='color:windowtext;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New";
+ mso-no-proof:yes'>results</span></b><b style='mso-bidi-font-weight:normal'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+ mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+ minor-fareast;mso-bidi-font-family:"Courier New";mso-no-proof:yes'><span
+ lang=EN-US>（流程判断）</span></span></b><span style='color:windowtext;display:none;
+ mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868329 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>3<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300320039000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc3 style='tab-stops:84.0pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868330"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-bidi-font-family:"Courier New";mso-no-proof:yes'>4.1.4</span></b><span
+ style='color:windowtext;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New";
+ mso-no-proof:yes'>post-function</span></b><b style='mso-bidi-font-weight:normal'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+ mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+ minor-fareast;mso-bidi-font-family:"Courier New";mso-no-proof:yes'><span
+ lang=EN-US>（审批后处理）</span></span></b><span style='color:windowtext;display:
+ none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868330 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300330030000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc2 style='tab-stops:52.5pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868331"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-no-proof:yes'>4.2</span></b><span style='color:windowtext;mso-no-proof:
+ yes;text-decoration:none;text-underline:none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>sub-step</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（子流程）</span></span></b><span style='color:windowtext;display:none;
+ mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868331 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300330031000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc3 style='tab-stops:84.0pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868332"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-bidi-font-family:"Courier New";mso-no-proof:yes'>4.2.1</span></b><span
+ style='color:windowtext;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New";
+ mso-no-proof:yes'>sub-flow </span></b><b style='mso-bidi-font-weight:normal'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+ mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+ minor-fareast;mso-bidi-font-family:"Courier New";mso-no-proof:yes'><span
+ lang=EN-US>子流程标签</span></span></b><span style='color:windowtext;display:none;
+ mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868332 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300330032000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc1 style='tab-stops:42.0pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868333"><b style='mso-bidi-font-weight:normal'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+ minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-no-proof:
+ yes'><span lang=EN-US>五、</span></span></b><span style='color:windowtext;
+ mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>splits</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（并行流程拆分节点）</span></span></b><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868333 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300330033000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc1 style='tab-stops:42.0pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868334"><b style='mso-bidi-font-weight:normal'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+ minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-no-proof:
+ yes'><span lang=EN-US>六、</span></span></b><span style='color:windowtext;
+ mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>joins</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（并行流程合并节点）</span></span></b><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868334 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300330034000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc1 style='tab-stops:42.0pt right dotted 414.8pt'><span
+ lang=EN-US><a href="#_Toc444868335"><b style='mso-bidi-font-weight:normal'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+ minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-no-proof:
+ yes'><span lang=EN-US>七、</span></span></b><span style='color:windowtext;
+ mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b
+ style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+ minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+ mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'>end-nodes</span></b><b
+ style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes'><span
+ lang=EN-US>（结束节点）</span></span></b><span style='color:windowtext;display:none;
+ mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868335 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300330035000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoToc2 style='tab-stops:right dotted 414.8pt'><span lang=EN-US><a
+ href="#_Toc444868336"><b style='mso-bidi-font-weight:normal'><span
+ style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+ 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+ mso-no-proof:yes'>7.1 node</span></b><b style='mso-bidi-font-weight:normal'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+ mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+ minor-fareast;mso-no-proof:yes'><span lang=EN-US>（结束节点标签）</span></span></b><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>... </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc444868336 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003400340034003800360038003300330036000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='mso-no-proof:yes'><o:p></o:p></span></span></p>
+ <p class=MsoNormal><!--[if supportFields]><b><span style='mso-ansi-language:
+ ZH-CN'><span style='mso-element:field-end'></span></span></b><![endif]--><span
+ lang=EN-US><o:p>&nbsp;</o:p></span></p>
+</w:Sdt><span lang=EN-US style='font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br
+clear=all style='mso-special-character:line-break;page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan'><span
+lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan'><span
+lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+mso-char-indent-count:0;mso-outline-level:1;mso-list:l9 level1 lfo1'><a
+name="_Toc444868315"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:14.0pt;mso-bidi-font-family:宋体;mso-bidi-theme-font:
+minor-fareast'><span style='mso-list:Ignore'>一、<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:14.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>workflow&nbsp;</span></b></a><span style='mso-bookmark:_Toc444868315'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>（根标签）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：工作流<span
+lang=EN-US>xml</span>描述的根标签，配置文件中的所有脚本路径（<span lang=EN-US>path=&quot;</span>脚本路径<span
+lang=EN-US>&quot;</span>）都存放在用户自定义文件夹（如 <span lang=EN-US>custom</span>）下<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+mso-char-indent-count:0;mso-outline-level:1;mso-list:l9 level1 lfo1'><a
+name="_Toc444868316"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:14.0pt;mso-bidi-font-family:宋体;mso-bidi-theme-font:
+minor-fareast'><span style='mso-list:Ignore'>二、<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:14.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>global</span></b></a><span style='mso-bookmark:_Toc444868316'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>（全局变量）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：进入流程时会加载这些脚本，所有变量信息在整个调用过程中可用，以下脚本非必需配置<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt;
+mso-char-indent-count:0;mso-outline-level:2;mso-list:l10 level2 lfo7'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:宋体;
+mso-bidi-theme-font:minor-fareast'><span style='mso-list:Ignore'>2.1</span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'> <a name="_Toc444868317">init</a></span></b><span
+style='mso-bookmark:_Toc444868317'><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>（初始化脚本）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：加载流程中用到的业务信息，通过配置做流程判断所需的变量信息都要在这里加载。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>path=&quot;</span><span style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>脚本路径<span lang=EN-US>&quot;</span>，存放于<span
+lang=EN-US>init</span>目录下。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt;
+mso-char-indent-count:0;mso-outline-level:2;mso-list:l10 level2 lfo7'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:宋体;
+mso-bidi-theme-font:minor-fareast'><span style='mso-list:Ignore'>2.2</span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'> <a name="_Toc444868318">email</a></span></b><span
+style='mso-bookmark:_Toc444868318'><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>（邮件配置）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：对应<span
+lang=EN-US>T_mailConfig</span>表中的邮件模板配置<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>doctype=&quot;</span><span style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>模板名称<span lang=EN-US>&quot;<o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt;
+mso-char-indent-count:0;mso-outline-level:2;mso-list:l10 level2 lfo7'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:宋体;
+mso-bidi-theme-font:minor-fareast'><span style='mso-list:Ignore'>2.3</span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'> <a name="_Toc444868319">reject</a></span></b><span
+style='mso-bookmark:_Toc444868319'><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>（驳回）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：流程驳回时调用<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>path=&quot;</span><span style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>脚本路径<span lang=EN-US>&quot;</span>，存放于<span
+lang=EN-US>function</span>目录下。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt;
+mso-char-indent-count:0;mso-outline-level:2;mso-list:l10 level2 lfo7'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:宋体;
+mso-bidi-theme-font:minor-fareast'><span style='mso-list:Ignore'>2.4</span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'> <a name="_Toc444868320">countersign</a></span></b><span
+style='mso-bookmark:_Toc444868320'><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>（会签）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：会签时调用<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>path=&quot;</span><span style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>脚本路径<span lang=EN-US>&quot;</span>，存放于<span
+lang=EN-US>function</span>目录下。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt;
+mso-char-indent-count:0;mso-outline-level:2;mso-list:l10 level2 lfo7'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:宋体;
+mso-bidi-theme-font:minor-fareast'><span style='mso-list:Ignore'>2.5</span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'> <a name="_Toc444868321">organization</a></span></b><span
+style='mso-bookmark:_Toc444868321'><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>（组织结构处理）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：组织结构处理脚本<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>path=&quot;</span><span style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>脚本路径<span lang=EN-US>&quot;</span>，存放于<span
+lang=EN-US>organization</span>目录下。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt;
+mso-char-indent-count:0;mso-outline-level:2;mso-list:l10 level2 lfo7'><a
+name="_Toc444868322"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>2.6<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span></b><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>each_before</span></b></a><span
+style='mso-bookmark:_Toc444868322'><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>（每步流程前校验）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>&nbsp;</span><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：每步流程前校验<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>path=&quot;</span><span style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>脚本路径<span lang=EN-US>&quot;</span>，存放于<span
+lang=EN-US>restrict</span>目录下。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt;
+mso-char-indent-count:0;mso-outline-level:2;mso-list:l10 level2 lfo7'><a
+name="_Toc444868323"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:宋体;mso-bidi-theme-font:minor-fareast'><span
+style='mso-list:Ignore'>2.7</span></span></b><![endif]><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>each_after&nbsp;</span></b></a><span style='mso-bookmark:_Toc444868323'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>（每步流程后处理）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：每步流程后处理<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:39.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>path=&quot;</span><span style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>脚本路径<span lang=EN-US>&quot;</span>，存放于<span
+lang=EN-US>function</span>目录下。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+mso-char-indent-count:0;mso-outline-level:1;mso-list:l9 level1 lfo1'><a
+name="_Toc444868324"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:14.0pt;mso-bidi-font-family:宋体;mso-bidi-theme-font:
+minor-fareast'><span style='mso-list:Ignore'>三、<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:14.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>initial-actions</span></b></a><span style='mso-bookmark:_Toc444868324'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>（开始节点）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：流程开始位置，每个流程配置必需包含该节点，下属节点同
+（<b style='mso-bidi-font-weight:normal'>四、<span lang=EN-US>sheps</span></b>）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+mso-char-indent-count:0;mso-outline-level:1;mso-list:l9 level1 lfo1'><a
+name="_Toc444868325"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:14.0pt;mso-bidi-font-family:宋体;mso-bidi-theme-font:
+minor-fareast'><span style='mso-list:Ignore'>四、<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:14.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>steps</span></b></a><span style='mso-bookmark:_Toc444868325'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>（审批节点）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：所有审批节点<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt;
+mso-char-indent-count:0;mso-outline-level:2;mso-list:l5 level2 lfo8'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:宋体;
+mso-bidi-theme-font:minor-fareast'><span style='mso-list:Ignore'>4.1</span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'> <a name="_Toc444868326">step</a></span></b><span
+style='mso-bookmark:_Toc444868326'><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>（审批节点）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;mso-para-margin-left:4.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：审批节点，一个流程中包含多个审批节点<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;mso-para-margin-left:4.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>Id</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>：审批节点唯一标示，不能重复<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;mso-para-margin-left:4.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>Name</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>：审批节点名称<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:63.0pt;mso-para-margin-left:6.0gd;
+text-indent:0cm;mso-char-indent-count:0'><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>Action</span></b><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>（动作节点）<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:63.0pt;mso-para-margin-left:6.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：审批动作，每个节点可有多个审批动作<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:63.0pt;mso-para-margin-left:6.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>Id</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>：动作<span
+lang=EN-US>id<o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:63.0pt;mso-para-margin-left:6.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>Name</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>：动作名称<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:114.0pt;text-indent:-36.0pt;
+mso-char-indent-count:0;mso-outline-level:3;mso-list:l5 level3 lfo8'><a
+name="_Toc444868327"><![if !supportLists]><span class=apple-converted-space><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:宋体;mso-bidi-theme-font:minor-fareast'><span
+style='mso-list:Ignore'>4.1.1<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span></b></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:"Courier New"'>before-action<span
+class=apple-converted-space>&nbsp;</span></span></b></a><span style='mso-bookmark:
+_Toc444868327'><span class=apple-converted-space><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>（上一节点结束时处理）</span></b></span></span><span
+class=apple-converted-space><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'><o:p></o:p></span></b></span></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;mso-para-margin-left:10.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：上一节点审批结束时调用该脚本，适用于到达本节点前做处理（如：财务审批前给某人发邮件）。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;mso-para-margin-left:10.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>type=&quot;beanshell&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>；<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;mso-para-margin-left:10.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>path=&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>脚本路径<span
+lang=EN-US>&quot;</span>，存放于<span lang=EN-US>restrict</span>目录下；<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;mso-para-margin-left:10.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>&lt;type&gt;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>变量<span
+lang=EN-US>&lt;/type&gt;</span>，传递变量。</span></p>
+
+<p class=MsoListParagraph style='margin-left:114.0pt;text-indent:-36.0pt;
+mso-char-indent-count:0;mso-outline-level:3;mso-list:l5 level3 lfo8'><a
+name="_Toc444868328"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:宋体;mso-bidi-theme-font:
+minor-fareast'><span style='mso-list:Ignore'>4.1.2<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span></span></b><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>validate</span></b></a><span
+style='mso-bookmark:_Toc444868328'><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>&nbsp;</span></b></span><span
+style='mso-bookmark:_Toc444868328'><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>（审批前校验）</span></b></span><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;mso-para-margin-left:10.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：本节点审批前校验。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;mso-para-margin-left:10.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>type=&quot;beanshell&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>；<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;mso-para-margin-left:10.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>path=&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>脚本路径<span
+lang=EN-US>&quot;</span>，存放于<span lang=EN-US>restrict</span>目录下；<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;mso-para-margin-left:10.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>&lt;type&gt;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>变量<span
+lang=EN-US>&lt;/type&gt;</span>，传递变量。</span></p>
+
+<p class=MsoListParagraph style='margin-left:114.0pt;text-indent:-36.0pt;
+mso-char-indent-count:0;mso-outline-level:3;mso-list:l5 level3 lfo8'><a
+name="_Toc444868329"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:宋体;mso-bidi-theme-font:
+minor-fareast'><span style='mso-list:Ignore'>4.1.3<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span></span></b><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>results</span></b></a><span
+style='mso-bookmark:_Toc444868329'><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast;mso-bidi-font-family:"Courier New"'>（流程判断）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:"Courier New"'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;text-indent:0cm;
+mso-char-indent-count:0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>描述：可有多个判断节点（<span lang=EN-US>result</span>），顺序进行下一流程判断，第一个满足条件的判断节点（<span
+lang=EN-US>result</span>）为下一审批节点，如果都不满足条件将进入无条件结果集（<span lang=EN-US>unconditional-result</span>）。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:171.0pt;text-indent:-54.0pt;
+mso-char-indent-count:0;mso-outline-level:5;mso-list:l5 level4 lfo8'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:
+major-fareast;mso-hansi-theme-font:major-fareast;mso-bidi-font-family:宋体;
+mso-bidi-theme-font:major-fareast'><span style='mso-list:Ignore'>4.1.3.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:
+major-fareast;mso-hansi-theme-font:major-fareast;mso-bidi-font-family:"Courier New"'>result</span></b><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:major-fareast;
+mso-hansi-theme-font:major-fareast;mso-bidi-font-family:"Courier New"'>（判断下一流程）<span
+lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:147.0pt;mso-para-margin-left:14.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：根据条件判断流程走向，并取出下一节点审批人。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:147.0pt;mso-para-margin-left:14.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>step=&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>下一节点<span
+lang=EN-US>&quot;</span>；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:147.0pt;mso-para-margin-left:14.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>end=&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>结束节点<span
+lang=EN-US>&quot;</span>，不能和<span lang=EN-US>setp</span>同时出现。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:210.0pt;text-indent:-54.0pt;
+mso-char-indent-count:0;mso-outline-level:6;mso-list:l5 level5 lfo8'><![if !supportLists]><span
+class=apple-converted-space><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+major-fareast;mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:major-fareast;
+mso-bidi-font-family:宋体;mso-bidi-theme-font:major-fareast'><span
+style='mso-list:Ignore'>4.1.3.1.1</span></span></b></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:
+major-fareast;mso-hansi-theme-font:major-fareast;mso-bidi-font-family:"Courier New"'>condition</span></b><span
+class=apple-converted-space><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:major-fareast;
+mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:major-fareast;
+mso-bidi-font-family:"Courier New"'>（条件判断）</span></b></span><span
+class=apple-converted-space><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+major-fareast;mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:major-fareast'><o:p></o:p></span></b></span></p>
+
+<p class=MsoListParagraph style='margin-left:156.0pt;text-indent:0cm;
+mso-char-indent-count:0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>描述：审批流程判断，满足条件时取下一审批人，并结束本次流程。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:160.55pt;mso-para-margin-left:
+15.29gd;text-indent:0cm;mso-char-indent-count:0'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>A</span></b><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>：</span></b><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>type=&quot;beanshell&quot;
+</span><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>根据脚本判断；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:160.55pt;mso-para-margin-left:
+15.29gd;text-indent:18.0pt;mso-char-indent-count:0'><span lang=EN-US
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>path=&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>脚本路径<span
+lang=EN-US>&quot;</span>，存放于<span lang=EN-US>results</span>目录下；<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:160.55pt;mso-para-margin-left:
+15.29gd;text-indent:18.0pt;mso-char-indent-count:0'><span lang=EN-US
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>&lt;type&gt;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>变量<span
+lang=EN-US>&lt;/type&gt;</span>，传递变量。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:160.55pt;mso-para-margin-left:
+15.29gd;text-indent:0cm;mso-char-indent-count:0'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>B</span></b><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>：</span></b><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>type=&quot;shell&quot;
+</span><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>根据<span lang=EN-US>php</span>表达式判断；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:160.55pt;mso-para-margin-left:
+15.29gd;text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'><span
+style='mso-tab-count:1'> </span>value=&quot;</span><span style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>表达式。<span lang=EN-US>&quot;<o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:160.55pt;mso-para-margin-left:
+15.29gd;text-indent:0cm;mso-char-indent-count:0'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>C</span></b><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>：</span></b><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>type=&quot;config&quot;
+</span><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>根据页面配置判断，配置项保存在<span lang=EN-US>t_wf_steps_condition</span>表中。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:160.55pt;mso-para-margin-left:
+15.29gd;text-indent:0cm;mso-char-indent-count:0'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>D</span></b><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>：</span></b><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>type=&quot;true&quot;
+</span><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>直接返回<span lang=EN-US>true</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:210.0pt;text-indent:-54.0pt;
+mso-char-indent-count:0;mso-outline-level:6;mso-list:l5 level5 lfo8'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:
+major-fareast;mso-hansi-theme-font:major-fareast;mso-bidi-font-family:宋体;
+mso-bidi-theme-font:major-fareast'><span style='mso-list:Ignore'>4.1.3.1.2</span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:
+major-fareast;mso-hansi-theme-font:major-fareast;mso-bidi-font-family:"Courier New"'>role</span></b><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:major-fareast;
+mso-hansi-theme-font:major-fareast'>（下一节点审批人）</span></b><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:major-fareast;
+mso-hansi-theme-font:major-fareast;mso-bidi-font-family:"Courier New"'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:156.05pt;mso-para-margin-left:
+14.86gd;text-indent:0cm;mso-char-indent-count:0'><span style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：取出下一审批人，可为多人。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:156.05pt;mso-para-margin-left:
+14.86gd;text-indent:0cm;mso-char-indent-count:0'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>A</span></b><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>：</span></b><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>type=&quot;0&quot;
+</span><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>从角色表取人<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:156.05pt;mso-para-margin-left:
+14.86gd;text-indent:10.5pt;mso-char-indent-count:1.0'><span lang=EN-US
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>&lt;uid&gt;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>角色编码<span
+lang=EN-US>&lt;/uid&gt;<o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:156.05pt;mso-para-margin-left:
+14.86gd;text-indent:0cm;mso-char-indent-count:0'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>B</span></b><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>：</span></b><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>type=&quot;1&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>或<span
+lang=EN-US>type=&quot;10&quot; </span>根据脚本取人；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:156.05pt;mso-para-margin-left:
+14.86gd;text-indent:18.0pt;mso-char-indent-count:0'><span lang=EN-US
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>path=&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>脚本路径<span
+lang=EN-US>&quot;</span>，存放于<span lang=EN-US>roles</span>目录下；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:153.0pt;mso-para-margin-left:14.57gd;
+text-indent:21.0pt'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>&lt;type&gt;</span><span style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>变量<span lang=EN-US>&lt;/type&gt;</span>，传递变量。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:156.05pt;mso-para-margin-left:
+14.86gd;text-indent:0cm;mso-char-indent-count:0'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>C</span></b><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>：</span></b><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>type=&quot;2&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>根据页面配置判断，配置项保存在<span
+lang=EN-US>t_wf_steps_condition</span>表中<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:156.05pt;mso-para-margin-left:
+14.86gd;text-indent:0cm;mso-char-indent-count:0'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>D</span></b><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>：</span></b><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>type=&quot;11&quot;
+</span><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>审批人工号配置在<span lang=EN-US>usercode</span>标签内<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:156.05pt;mso-para-margin-left:
+14.86gd;text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>&lt;usercode&gt;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>工号<span
+lang=EN-US>,</span>工号<span lang=EN-US>&lt;/usercode&gt;<o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:171.0pt;text-indent:-54.0pt;
+mso-char-indent-count:0;mso-outline-level:5;mso-list:l5 level4 lfo8'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:
+major-fareast;mso-hansi-theme-font:major-fareast;mso-bidi-font-family:宋体;
+mso-bidi-theme-font:major-fareast'><span style='mso-list:Ignore'>4.1.3.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:
+major-fareast;mso-hansi-theme-font:major-fareast;mso-bidi-font-family:"Courier New"'>unconditional-result</span></b><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:major-fareast;
+mso-hansi-theme-font:major-fareast;mso-bidi-font-family:"Courier New"'>（无条件进入下一流程）<span
+lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='margin-left:116.95pt;mso-para-margin-left:11.14gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：无需判断直接取出下一节点审批人，结束本次流程。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:126.0pt;mso-para-margin-left:12.0gd;
+text-indent:12.0pt;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>step=&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>下一节点<span
+lang=EN-US>&quot;</span>；<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:137.95pt;mso-para-margin-left:
+13.14gd;text-indent:.05pt;mso-char-indent-count:0'><span lang=EN-US
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>auto=&quot;true&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>，如果设置该标签本节点不参与审批，自动进入下一审批点，用于进入子流程。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:137.95pt;mso-para-margin-left:
+13.14gd;text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>end=&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>结束节点<span
+lang=EN-US>&quot;</span>，不能和<span lang=EN-US>setp</span>同时出现。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:114.0pt;text-indent:-36.0pt;
+mso-char-indent-count:0;mso-outline-level:3;mso-list:l5 level3 lfo8'><a
+name="_Toc444868330"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:宋体;mso-bidi-theme-font:
+minor-fareast'><span style='mso-list:Ignore'>4.1.4<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span></span></b><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>post-function</span></b></a><span
+style='mso-bookmark:_Toc444868330'><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast;mso-bidi-font-family:"Courier New"'>（审批后处理）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:"Courier New"'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;mso-para-margin-left:10.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：本节点审批后处理，如调用接口、修改业务状态等。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;mso-para-margin-left:10.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>type=&quot;beanshell&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>；<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;mso-para-margin-left:10.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>path=&quot;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>脚本路径<span
+lang=EN-US>&quot;</span>，存放于<span lang=EN-US>function</span>目录下；<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:105.0pt;mso-para-margin-left:10.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span lang=EN-US style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>&lt;type&gt;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>变量<span
+lang=EN-US>&lt;/type&gt;</span>，传递变量。</span></p>
+
+<p class=MsoListParagraph style='margin-left:75.0pt;text-indent:0cm;mso-char-indent-count:
+0'><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt;
+mso-char-indent-count:0;mso-outline-level:2;mso-list:l5 level2 lfo8'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:宋体;
+mso-bidi-theme-font:minor-fareast'><span style='mso-list:Ignore'>4.2</span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'> <a name="_Toc444868331">sub-step</a></span></b><span
+style='mso-bookmark:_Toc444868331'><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>（子流程）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:75.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：遇到该标签是将进行子流程判断，如果满足条件将进入子流程审批，子流程审批完再回到当前节点（<span
+lang=EN-US>step</span>）继续审批。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:114.0pt;text-indent:-36.0pt;
+mso-char-indent-count:0;mso-outline-level:3;mso-list:l5 level3 lfo8'><a
+name="_Toc444868332"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:宋体;mso-bidi-theme-font:
+minor-fareast'><span style='mso-list:Ignore'>4.2.1<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span></span></b><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>sub-flow
+</span></b></a><span style='mso-bookmark:_Toc444868332'><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>子流程标签</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:"Courier New"'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:91.55pt;mso-para-margin-left:8.72gd;
+text-indent:18.0pt'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>uid</span><span style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>：子流程<span lang=EN-US>id<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:91.55pt;mso-para-margin-left:8.72gd;
+text-indent:18.0pt'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>title</span><span style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>：子流程名称<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:91.55pt;mso-para-margin-left:8.72gd;
+text-indent:18.0pt'><span lang=EN-US style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>desc</span><span style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>：子流程描述<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:171.0pt;text-indent:-54.0pt;
+mso-char-indent-count:0;mso-outline-level:5;mso-list:l5 level4 lfo8'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:
+major-fareast;mso-hansi-theme-font:major-fareast;mso-bidi-font-family:宋体;
+mso-bidi-theme-font:major-fareast'><span style='mso-list:Ignore'>4.2.1.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:
+major-fareast;mso-hansi-theme-font:major-fareast;mso-bidi-font-family:"Courier New"'>condition</span></b><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:major-fareast;
+mso-hansi-theme-font:major-fareast;mso-bidi-font-family:"Courier New"'>（子流程</span></b><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:major-fareast;
+mso-hansi-theme-font:major-fareast'>流程判断）</span></b><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:major-fareast;
+mso-hansi-theme-font:major-fareast;mso-bidi-font-family:"Courier New"'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:98.8pt;mso-para-margin-left:9.41gd;
+text-indent:18.15pt'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>描述：判断是否进入该子流程，功能同<span lang=EN-US>4.1.3.1.1 <o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+mso-char-indent-count:0;mso-outline-level:1;mso-list:l9 level1 lfo1'><a
+name="_Toc444868333"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:14.0pt;mso-bidi-font-family:宋体;mso-bidi-theme-font:
+minor-fareast'><span style='mso-list:Ignore'>五、<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:14.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>splits</span></b></a><span style='mso-bookmark:_Toc444868333'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>（并行流程拆分节点）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：并行流程开始<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+mso-char-indent-count:0;mso-outline-level:1;mso-list:l9 level1 lfo1'><a
+name="_Toc444868334"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:14.0pt;mso-bidi-font-family:宋体;mso-bidi-theme-font:
+minor-fareast'><span style='mso-list:Ignore'>六、<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:14.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>joins</span></b></a><span style='mso-bookmark:_Toc444868334'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>（并行流程合并节点）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：并行流程结束<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+mso-char-indent-count:0;mso-outline-level:1;mso-list:l9 level1 lfo1'><a
+name="_Toc444868335"><![if !supportLists]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='mso-bidi-font-size:14.0pt;mso-bidi-font-family:宋体;mso-bidi-theme-font:
+minor-fareast'><span style='mso-list:Ignore'>七、<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:14.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast'>end-nodes</span></b></a><span style='mso-bookmark:_Toc444868335'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>（结束节点）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:0cm;mso-char-indent-count:
+0'><span style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>描述：流程结束位置<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-outline-level:2'><a
+name="_Toc444868336"><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>7.1
+node</span></b></a><span style='mso-bookmark:_Toc444868336'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast'>（结束节点标签）</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-family:宋体;
+mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:52.5pt;mso-para-margin-left:5.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span class=html-attribute-name><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>id</span></span><span
+class=html-attribute><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:"Courier New"'>=&quot;</span></span><span
+class=html-attribute-value><span style='mso-bidi-font-size:10.5pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>结束<span
+lang=EN-US>id</span></span></span><span class=html-attribute><span lang=EN-US
+style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-fareast;mso-bidi-font-family:"Courier New"'>&quot;</span></span><span
+class=apple-converted-space><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:"Courier New"'>,</span></span><span
+class=apple-converted-space><span style='mso-bidi-font-size:10.5pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>结束节点<span
+lang=EN-US>id<o:p></o:p></span></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:52.5pt;mso-para-margin-left:5.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span class=html-attribute-name><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>name</span></span><span
+class=html-attribute><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:"Courier New"'>=&quot;</span></span><span
+class=html-attribute-value><span style='mso-bidi-font-size:10.5pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>结束</span></span><span
+class=html-attribute><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:"Courier New"'>&quot;</span></span><span
+class=apple-converted-space><span style='mso-bidi-font-size:10.5pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>，结束节点名称<span
+lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:52.5pt;mso-para-margin-left:5.0gd;
+text-indent:0cm;mso-char-indent-count:0'><span class=html-attribute-name><span
+lang=EN-US style='mso-bidi-font-size:10.5pt;font-family:宋体;mso-ascii-theme-font:
+minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>path</span></span><span
+class=html-attribute><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:"Courier New"'>=&quot;</span></span><span
+class=html-attribute-value><span style='mso-bidi-font-size:10.5pt;font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"Courier New"'>脚本路径</span></span><span
+class=html-attribute><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:"Courier New"'>&quot;</span></span><span style='font-family:
+宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-fareast'>，存放于<span lang=EN-US>function</span>目录下，审批完成后调用；</span><span
+class=html-attribute><span lang=EN-US style='mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;
+mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;
+mso-bidi-font-family:"Courier New"'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:31.5pt;text-indent:21.0pt'><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>&lt;type&gt;</span><span
+style='font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:
+宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast'>变量<span
+lang=EN-US>&lt;/type&gt;</span>，传递变量。</span></p>
+
+</div>
+
+</body>
+
+</html>

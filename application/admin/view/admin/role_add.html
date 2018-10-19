@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="__STATIC__/admin/css/font.css">
+    <link rel="stylesheet" href="__STATIC__/admin/css/xadmin.css">
+	<link rel="stylesheet" href="__STATIC__/admin/lib/layui/css/layui.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="__STATIC__/admin/js/xadmin.js"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="x-body">
+        <form class="layui-form layui-form-pane" enctype="multipart/form-data" method="POST" action="{:url('roleSave')}">
+                <div class="layui-form-item">
+                    <label for="role" class="layui-form-label">
+                        <span class="x-red">*</span>角色名
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="role" name="role" required="" lay-verify="required"
+                        autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">
+                        拥有权限
+                    </label>
+                    <table  class="layui-table layui-input-block">
+                        <tbody>
+                            <tr>
+                                <td width="60px">商户管理</td>
+                                <td>
+                                    <div class="layui-input-block">
+                                            <input name="authority[]" type="checkbox" value="商户列表">商户列表
+                                            <input name="authority[]" type="checkbox" value="商户添加"> 商户添加
+                                            <input name="authority[]" type="checkbox" value="商户修改"> 商户修改
+                                            <input name="authority[]" type="checkbox" value="商户删除"> 商户删除
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>商铺管理</td>
+                                <td>
+                                    <div class="layui-input-block">
+                                            <input name="authority[]" type="checkbox" value="商铺列表">商铺列表
+                                            <input name="authority[]" type="checkbox" value="商铺添加"> 商铺添加
+                                            <input name="authority[]" type="checkbox" value="商铺修改"> 商铺修改
+                                            <input name="authority[]" type="checkbox" value="商铺删除"> 商铺删除
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>合同管理</td>
+                                <td>
+                                    <div class="layui-input-block">
+                                            <input name="authority[]" type="checkbox" value="基础信息列表">基础信息列表
+                                            <input name="authority[]" type="checkbox" value="基础信息添加"> 基础信息添加
+                                            <input name="authority[]" type="checkbox" value="基础信息修改"> 基础信息修改
+                                            <input name="authority[]" type="checkbox" value="协议信息列表"> 协议信息列表
+                                            <input name="authority[]" type="checkbox" value="协议信息添加"> 协议信息添加
+                                            <input name="authority[]" type="checkbox" value="协议信息修改"> 协议信息修改
+                                            <input name="authority[]" type="checkbox" value="合同审核"> 合同审核
+                                            <input name="authority[]" type="checkbox" value="数据解析"> 数据解析
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>财务管理</td>
+                                <td>
+                                    <div class="layui-input-block">
+                                            <input name="authority[]" type="checkbox" value="固定租金列表"> 固定租金列表
+                                            <input name="authority[]" type="checkbox" value="固定租金修改"> 固定租金修改
+                                            <input name="authority[]" type="checkbox" value="租户费用列表"> 租户费用列表
+                                            <input name="authority[]" type="checkbox" value="租户费用添加"> 租户费用添加
+                                            <input name="authority[]" type="checkbox" value="租户费用修改"> 租户费用修改
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label for="remark" class="layui-form-label">
+                        描述
+                    </label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="请输入内容" id="remark" name="remark" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                <button class="layui-btn" lay-submit="" lay-filter="add" id="add" type="submit">增加</button>
+              </div>
+            </form>
+    </div>
+  </body>
+</html>

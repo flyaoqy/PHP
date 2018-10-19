@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="shortcut icon" href="__STATIC__/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="__STATIC__/admin/css/font.css">
+    <link rel="stylesheet" href="__STATIC__/admin/css/xadmin.css">
+	<link rel="stylesheet" href="__STATIC__/admin/lib/layui/css/layui.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="__STATIC__/admin/js/xadmin.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script>
+       layui.use('table', function(){
+       var table = layui.table;
+        });
+	
+      layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        
+        //执行一个laydate实例
+        laydate.render({
+          elem: '#start' //指定元素
+		
+        });
+
+        //执行一个laydate实例
+        laydate.render({
+          elem: '#end' //指定元素
+        });
+      });
+       
+	         /*合同审核*/
+      function process_analysis(obj,contract_id){
+          layer.confirm('确认解析数据?',
+			   function(index){
+              //发异步删除数据
+			  $.get("{:url('analysis')}",{contract_id:contract_id});
+              layer.msg('解析成功!',{icon:1,time:1000});
+          });
+      }
+       
+      /*合同审核*/
+      function process_check(obj,contract_id){
+          layer.confirm('确认审核通过吗？',{
+			       btn:['审批通过','取消']
+			   },
+			   function(index){
+              //发异步删除数据
+			  $.get("{:url('check')}",{contract_id:contract_id},function(data,status){
+			  console.log(data);
+			    if(parseInt(data)==2){
+			  $(obj).parents("tr").remove();
+              layer.msg('审核通过!',{icon:1,time:1000});
+			  } else if(parseInt(data)==1){
+				  layer.msg('审核协议信息出错，请联系管理员!',{icon:2,time:1000});
+			  } else {
+			      layer.msg('只有财务人员才可以审核合同!',{icon:2,time:1000});
+				  }
+			  });
+           
+          });
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div class="x-nav">
+      <span class="layui-breadcrumb">
+        <a href="">首页</a>
+        <a href="">合同管理</a>
+      </span>
+      <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace('index')" title="刷新">
+        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+    </div>
+    <div class="x-body">
+      <div class="layui-row">
+        <form class="layui-form layui-col-md12 x-so" type="POST" action="{:url('search')}">
+          <input type="text" id="company_name" name="company_name"  placeholder="请输入商户名称" autocomplete="off" class="layui-input">
+          <button class="layui-btn"  lay-submit="" lay-filter="sreach" type="submit"><i class="layui-icon">&#xe615;</i></button>
+        </form>
+      </div>
+      <xblock>
+        <button class="layui-btn layui-btn-disabled" ><i class="layui-icon"></i>添加</button>
+        <span class="x-right" style="line-height:40px">共有数据：{$count} 条</span>
+      </xblock>
+	  <div class="table-container">
+      <table class="layui-table" lay-data="" lay-size="sm">
+        <thead>
+          <tr>
+			<th lay-data="{field:'id',width:50,sort: true}">ID</th>
+            <th lay-data="{field:'contract_id',width:90,sort: true}">合同编号</th>
+            <th lay-data="{field:'type',width:90,sort: true}">合同类型</th>
+            <th lay-data="{field:'name',width:160}">合同名称</th>
+            <th lay-data="{field:'company_name',width:220}">商户名称</th>
+            <th lay-data="{field:'code',width:90,sort: true}">商户代码</th>
+            <th lay-data="{field:'belonger',width:120,sort: true}">所属招商人员</th>
+            <th lay-data="{field:'brand',width:100}">品牌</th>
+			<th lay-data="{field:'retail_format',width:90,sort: true}">业态名称</th>
+            <th lay-data="{field:'berth_number',width:80,sort: true}">铺位号</th>
+            <th lay-data="{field:'payment_method',width:90,sort: true}">结账方式</th>
+            <th lay-data="{field:'startdate',width:110,sort: true}">合同开始时间</th>
+            <th lay-data="{field:'enddate',width:110,sort: true}">合同结束时间</th>
+			<th lay-data="{field:'upload',width:85}">合同附件</th>
+			<th lay-data="{field:'status',width:80,sort: true}">状态</th>
+			<th lay-data="{field:'operate',width:90}">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+		{volist name='store_contract' id='vo'}
+          <tr>
+            <td>{$vo.id}</td>
+			<td>{$vo.contract_id}</td>
+            <td>{$vo.type}</td>
+            <td>{$vo.name}</td>
+            <td>{$vo.company_name}</td>
+            <td>{$vo.code}</td>
+            <td>{$vo.belonger}</td>
+            <td>{$vo.brand}</td>
+			<td>{$vo.retail_format}</td>
+            <td>{$vo.berth_number}</td>
+            <td>{$vo.payment_method}</td>
+            <td>{$vo.startdate}</td>
+			<td>{$vo.enddate}</td>
+			<td>
+			    <a href="http://192.168.2.6__ROOT__/public/uploads/{$vo.upload}" download="{$vo.upload}" width="150" alt="">下载附件</a>
+			</td>
+			<td class="td-status">
+              <span class="layui-btn layui-btn-normal layui-btn-mini">{if condition="$vo.status==0"}未审核{/if}</span>
+			</td>
+            <td class="td-manage">
+              <a title="查看" onclick=x_admin_show('查看商户协议','{:url("read")}'+'?id='+"{$vo.id}",990,460) href="javascript:;">
+                <i class="layui-icon">&#xe63c;</i>
+              </a>			  
+			  <!-- -->
+              <a title="审核" onclick="process_check(this,'{$vo.contract_id}')" href="javascript:;">
+                <i class="layui-icon">&#xe6b2;</i>
+              </a>
+            </td>
+          </tr>
+		{/volist}
+        </tbody>
+       </table>
+        <div style="padding-top:10px ">
+	      {$store_contract->render()}
+	    </div>
+      </div>
+    </div>
+  </body>
+</html>

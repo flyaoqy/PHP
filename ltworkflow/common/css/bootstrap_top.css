@@ -1,0 +1,118 @@
+/* 定义button样式 */
+button {
+	width: 100px;
+	height: 30px;
+}
+
+
+/*
+去掉该样式后鼠标放到下拉框上就不会出现字体变化
+
+ button:hover {
+	font-size: 12px;
+}
+*/ 
+/* 搜索域样式 */
+.search-condition {
+	background: #F7F7F7;
+	border: 1px solid #ECECEC;
+	color: #666666;
+	padding: 20px 20px;
+	text-align: left;
+}
+
+/* 页面分组标题样式 */
+.back_title {
+	border-bottom: 1px dotted #9BC7E8;
+	text-align: left;
+	margin-top: 15px;
+}
+
+.back_title h2 {
+	border-left: 2px solid #61A7DB;
+	padding: 0px 10px;
+	margin: 5px 0px 5px 3px;
+	font-size: 16px;
+	font-family: "宋体";
+	color: #333333;
+}
+
+/* 表格样式 */
+.datalist {
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	border-collapse: collapse;
+	width: 90%;
+}
+
+.datalist th {
+	background: url(../images/tb_bg.gif) repeat-x;
+	height: 24px;
+	color: #333333;
+	font-size: 12px;
+	font-weight: normal;
+	border-left: 1px solid #A2CBEA;
+	nowrap: nowrap;
+	border-top: 1px solid #A2CBEA;
+	border-bottom: 1px solid #A2CBEA;
+	padding: 0px 5px;
+	text-align: center;
+}
+
+.datalist td {
+	border-collapse: collapse;
+	border: 1px solid #E1E1E1;
+	height: 22px;
+	line-height: 22px;
+	margin: 0px;
+	padding: 0px 3px 0px 3px;
+	text-align: left;
+	color: #666666;
+	font-size: 12px;
+	nowrap: nowrap;
+}
+
+.datalist td input,.datalist td select {
+	width: 100%
+}
+
+.datalist td a:link {
+	color: #007abf;
+	text-decoration: none
+}
+
+.datalist td a:visited {
+	color: #007abf;
+	text-decoration: none
+}
+
+.datalist td a:hover {
+	color: #007abf;
+	text-decoration: underline
+}
+
+.datalist td a:active {
+	color: #007abf;
+	text-decoration: underline
+}
+
+.datalist .tern {
+	text-align: center
+}
+
+.datalist .tern2 {
+	text-align: right
+}
+
+/* 自定义日期控件样式 */
+div.ui-datepicker {
+	font-size: 12px
+}
+
+/*自定义的radio样式*/
+.radio-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="shortcut icon" href="__STATIC__/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="__STATIC__/admin/css/font.css">
+    <link rel="stylesheet" href="__STATIC__/admin/css/xadmin.css">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="__STATIC__/admin/lib/layui/css/layui.css">
+	<script type="text/javascript" src="__STATIC__/admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/admin/js/xadmin.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="layui-field-box">
+    <table class="layui-table" lay-size="sm" lay-even>
+    <thead>
+	<tr>
+	  <th style="text-align:center" colspan=8>禹洲中央广场</th>
+	</tr>
+    <tr>
+	  <th></th>
+      <th>项目</th>
+      <th>租金(元)</th>
+      <th>物业费(元)</th>
+      <th>装修管理费(元)</th>
+      <th>垃圾清运费(元)</th>
+	  <th>保证金(元)</th>
+	  <th>合计(元)</th>
+    </tr>
+    </thead>
+	<tbody>
+	{volist name='data' id='vo'}
+	<tr>
+        <td rowspan=4>MAIL</td>
+        <td>应收</td>
+        <td>{$vo.ys_zj}</td>
+        <td>{$vo.ys_wyf}</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+	</tr>
+    <tr>
+        <td>已收</td>
+        <td>{$vo.ss_zj}</td>
+        <td>{$vo.ss_wyf}</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>		
+	</tr>
+    <tr>
+        <td>欠费</td>
+        <td>{$vo.qf_zj}</td>
+        <td>{$vo.qf_wyf}</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>		
+	</tr>
+    <tr>
+        <td>收缴率</td>
+        <td>{$vo.sjl_zj}</td>
+        <td>{$vo.sjl_wyf}</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+	</tr>
+	<tr>
+        <td rowspan=4>风情街</td>
+        <td>应收</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+	</tr>
+    <tr>
+        <td>已收</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+	</tr>
+    <tr>
+        <td>欠费</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+	</tr>
+    <tr>
+        <td>收缴率</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+	</tr>
+	{/volist} 
+	</tbody>
+    </table>
+	</div>
+    <script>
+        layui.use('table', function(){
+        var table = layui.table;
+         table.init('test', {
+          height: 280 //设置高度
+        });
+        });
+    </script>
+
+</body>
+</html>

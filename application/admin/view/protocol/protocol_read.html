@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="__STATIC__/admin/css/font.css">
+    <link rel="stylesheet" href="__STATIC__/admin/css/xadmin.css">
+	<link rel="stylesheet" href="__STATIC__/admin/lib/layui/css/layui.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="__STATIC__/admin/js/xadmin.js"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+  <form class="layui-form">
+    <div class="layui-tab layui-tab-card">
+        <ul class="layui-tab-title">
+        <li class="layui-this">基本信息</li>
+	    <li>租金</li>
+        <li>物业费</li>
+        <li>水电费</li>
+        </ul>
+    <div class="layui-tab-content" style="height: 800px;">
+        <div class="layui-tab-item layui-show">         
+	    <div class="x-body">
+           
+            <div class="layui-form-item" style="display:none">
+              <label for="id" class="layui-form-label">
+                  <span class="x-red">*</span>ID
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="id" name="id" readonly="readonly" required="" lay-verify="required" value="{$data.id}"
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+			<div class="layui-form-item">
+                <label for="contract_id" class="layui-form-label">
+                <span class="x-red">*</span>合同编号
+                </label>
+            <div class="layui-input-inline">
+                <input type="text" id="contract_id" name="contract_id" required="" lay-verify="contract_id" value="{$data.contract_id}"
+                    autocomplete="off" class="layui-input">
+            </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="leaser" class="layui-form-label">
+                <span class="x-red">*</span>出租方(甲方)
+                </label>
+            <div class="layui-input-inline">
+                <select id="leaser" name="leaser" class="valid">
+                    <option id="">禹洲置业(合肥)东城有限公司</option>
+                </select>
+            </div>
+            </div>
+		    <div class="layui-form-item">
+                <label for="leasee" class="layui-form-label">
+                <span class="x-red">*</span>承租方(乙方)
+                </label>
+            <div class="layui-input-inline">
+                  <input type="text" id="leasee" name="leasee" required="" lay-verify="required" value="{$data.leasee}"
+                  autocomplete="off" class="layui-input">
+            </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="square" class="layui-form-label">
+                <span class="x-red">*</span>签约面积(㎡)
+                </label>
+            <div class="layui-input-inline">
+                <input type="text" id="square" name="square" required="" lay-verify="square" value="{$data.square}"
+                  autocomplete="off" class="layui-input">
+            </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="retail_format" class="layui-form-label">
+                <span class="x-red">*</span>经营类型
+                </label>
+            <div class="layui-input-inline">
+                 <input type="text" id="retail_format" name="retail_format" required="" lay-verify="required" value="{$data.retail_format}"
+                  autocomplete="off" class="layui-input">
+            </div>
+            </div>
+		    <div class="layui-form-item">
+                <label for="brand" class="layui-form-label">
+                <span class="x-red">*</span>经营品牌
+                </label>
+            <div class="layui-input-inline">
+                <input type="text" id="brand" name="brand" required="" lay-verify="required" autocomplete="off" class="layui-input" value="{$data.brand}"> 
+            </div>
+            </div>
+		
+		    <div class="layui-form-item">
+                <label for="deposit" class="layui-form-label">
+                <span class="x-red">*</span>保证金(元)
+                </label>
+            <div class="layui-input-inline">
+                <input type="text" id="deposit" name="deposit" required="" lay-verify="deposit" value="{$data.deposit}"
+                  autocomplete="off" class="layui-input">
+            </div>
+            </div>
+                <div class="layui-form-item">
+                <label for="expiry" class="layui-form-label">
+                <span class="x-red">*</span>租赁期限(年)
+                </label>
+            <div class="layui-input-inline">
+                <input type="text" id="expiry" name="expiry" required="" lay-verify="expiry" value="{$data.expiry}"
+                  autocomplete="off" class="layui-input">
+            </div>
+            </div>
+		    <div class="layui-form-item">
+                <label for="startdate" class="layui-form-label">
+                <span class="x-red">*</span>合同开始时间
+                </label>
+            <div class="layui-input-inline">
+                <input type="text" id="startdate" name="startdate" required="" lay-verify="date" value="{$data.startdate}"
+                  autocomplete="off" class="layui-input">
+            </div>
+            </div>
+		    <div class="layui-form-item">
+                <label for="enddate" class="layui-form-label">
+                <span class="x-red">*</span>合同结束时间
+                </label>
+            <div class="layui-input-inline">
+                <input type="text" id="enddate" name="enddate" required="" lay-verify="date" value="{$data.enddate}"
+                  autocomplete="off" class="layui-input">
+            </div>
+            </div>
+		  
+            <div class="layui-form-item layui-form-text">
+                <label for="des1" class="layui-form-label">
+                  备注
+                </label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" id="des1" name="des1" class="layui-textarea" >{$data.des1}</textarea>
+            </div>
+            </div>
+        </div>
+	    </div>
+		
+        <!--租金tab页面-->
+	    <div class="layui-tab-item">
+        <div class="x-body">
+ 		
+ <div class="layui-form-item ">
+                <label for="" class="layui-form-label">
+                <span class="x-red">*</span>计租方式
+                </label>
+                <div class="layui-input-inline">
+                 <select id="renting_style" name="renting_style" >
+				    <option name="" {if condition="$dataRental.renting_style=='按商铺营业额百分比'"}selected="selected" value="{$dataRental.renting_style}"{/if}>按商铺营业额百分比</option>
+                    <option name="" {if condition="$dataRental.renting_style=='按商铺租金标准及递增比例'"}selected="selected" value="{$dataRental.renting_style}"{/if}>按商铺租金标准及递增比例</option>
+					<option name="" {if condition="$dataRental.renting_style=='按保底租金与分成租金取其高'"}selected="selected" value="{$dataRental.renting_style}"{/if}>按保底租金与分成租金取其高</option>
+                  </select>
+				</div>
+            </div>
+			<div class="layui-form-item">
+                <label for="" class="layui-form-label">
+                    <span class="x-red">*</span>租金详情
+                </label>
+            </div>
+			<div class="layui-form-item">
+				<textarea id="rich_txt1" style="display: none;" name="detail1">{$dataRental.detail1}</textarea>
+			</div>
+			
+            <hr class="layui-bg-gray">	
+			
+			<div class="layui-form-item">
+                <label for="free" class="layui-form-label">
+                    <span class="x-red"></span>免租期月数
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="free" name="free" placeholder="请输入总月数"  autocomplete="off" class="layui-input" value="{$dataRental.free}">
+                </div>
+            </div>
+			<div class="layui-form-item">
+                <label for="" class="layui-form-label">
+                    <span class="x-red"></span>免租期详情
+                </label>
+            </div>
+			<div class="layui-form-item">
+				<textarea id="rich_txt2" style="display: none;" name="detail2">{$dataRental.detail2}</textarea>
+			</div>
+					  
+            <div class="layui-form-item layui-form-text">
+                <label for="des2" class="layui-form-label">
+                  描述
+                </label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" id="des2" name="des2" class="layui-textarea" >{$dataRental.des2}</textarea>
+            </div>
+            </div>
+        </div>
+	    </div>
+		
+	    <!--物业费tab页面 -->
+        <div class="layui-tab-item">	    
+		<div class="x-body">
+
+          <div class="layui-form-item">
+              <label for="standard" class="layui-form-label">
+                  <span class="x-red">*</span>费用标准:(元/㎡/月)
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="standard" name="standard" required="" lay-verify="standard"  value="{$dataService.standard}"
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+		  
+		  <div class="layui-form-item">
+              <label for="month_service" class="layui-form-label">
+                  <span class="x-red">*</span>月度费用(元/月)
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="month_service" name="month_service" required="" lay-verify="month_service" value="{$dataService.month_service}"
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+		  <div class="layui-form-item">
+              <label for="service_rate" class="layui-form-label">
+                  <span class="x-red"></span>年增长比例
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="service_rate" name="service_rate" value="{$dataService.service_rate}" autocomplete="off" class="layui-input">
+              </div>
+          </div>
+	
+          <div class="layui-form-item layui-form-text">
+              <label for="des3" class="layui-form-label">
+                  描述
+              </label>
+              <div class="layui-input-block">
+                  <textarea placeholder="请输入内容" id="des3" name="des3" class="layui-textarea" >{$dataService.des3}</textarea>
+              </div>
+          </div>
+    </div>
+	    </div>
+        <div class="layui-tab-item">
+        暂无信息
+	    </div>
+    </div>
+    </div>
+	</form>
+  </body>
+  <script>
+        layui.use('layedit', function(){
+         var layedit = layui.layedit;
+         var index1 = layedit.build('rich_txt1',{
+		    height: 160
+		 }); //建立编辑器
+      });
+	  
+	    layui.use('layedit', function(){
+         var layedit = layui.layedit;
+         layedit.build('rich_txt2',{
+		    height: 160
+		 }); //建立编辑器
+      });
+  </script>
+</html>

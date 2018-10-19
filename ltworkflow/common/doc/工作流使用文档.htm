@@ -1,0 +1,148 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<script type="text/javascript" src="工作流使用文档.files/shCore.js"></script>
+<script type="text/javascript" src="工作流使用文档.files/shBrushJScript.js"></script>
+<script type="text/javascript" src="工作流使用文档.files/shBrushPhp.js"></script>
+<script type="text/javascript" src="工作流使用文档.files/shBrushCss.js"></script>
+<link type="text/css" rel="Stylesheet" href="工作流使用文档.files/shCore.css"/>
+<link type="text/css" rel="Stylesheet" href="工作流使用文档.files/shThemeDefault.css"/>
+</head>
+
+<body >
+<style type="text/css">
+	.common_button{border:1px solid white; color:white; background-color:gray; min-width:70px; height:25px; line-height:23px; cursor:pointer;padding:0px 5px;}
+	.common_button:hover{color:gray;background-color:white;}
+</style>
+<div style="padding:0px;" class="container">
+	<h3>工作流引擎</h3>
+	<div class="container">
+		<div>
+			<div class="nav_show"  id="invoke_show" >
+				<div style="margin-top:20px;">
+					<h5>1、数据库连接：ltworkflow/service/config/database.php</h5>
+					<pre class="brush:php">
+						$db['default']['hostname'] = '127.0.0.1' ;
+						$db['default']['username'] = '';
+						$db['default']['password'] = '';
+						$db['default']['database'] = 'workflow';
+						$db['default']['dbdriver'] = 'mysql';
+						$db['default']['dbprefix'] = '';
+						$db['default']['pconnect'] = TRUE;
+						$db['default']['db_debug'] = TRUE;
+						$db['default']['cache_on'] = FALSE;
+						$db['default']['cachedir'] = '';
+						$db['default']['char_set'] = 'utf8';
+						$db['default']['dbcollat'] = 'utf8_general_ci';
+						$db['default']['swap_pre'] = '';
+						$db['default']['autoinit'] = TRUE;
+						$db['default']['stricton'] = FALSE;
+					</pre>
+					<h5>2、用户信息配置：ltworkflow/service/config/config.php</h5>
+					<pre class="brush:php">
+						//用户定义文件夹
+						$custom_folder = "custom";
+						
+						//用户邮件处理类,如果不需要可注释$email数组
+						//必需实现service/inheritance/InterfaceEmail接口
+						$email['default']['class'] = "MailService";//类名
+						$email['default']['path'] = $custom_folder."/email/mailservice.php";//类路径
+						
+						//用户信息类
+						// userinfo必需实现service/inheritance/InterfaceUserDB接口
+						$custom['userinfo']['class'] = "UserDB";
+						$custom['userinfo']['path'] = $custom_folder."/database/UserDB.php";
+					</pre>
+					<h5>3、单据打开：</h5>
+					<pre class="brush:php">
+						//打开单据
+						require_once FCPATH . 'ltworkflow/workflow.php';
+						$workflow = new workflow();
+						/**
+						 * 获取功能按钮（送审、通过、驳回等）
+						 * @param $etuid 实例id
+						 * @param $ssn   登录人工号
+						 * @param $wfuid 流程id
+						 * @return array(
+						 *                id   动作id
+						 *                name 动作名称
+						 *               )
+						 */
+						$actions = $workflow->getAvailableActions ( $etuid, $ssn,$wfuid);
+						
+						/**
+						 * 获取当前流程信息，可用户权限判断
+						 * @param $etuid 实例id
+						 * @param $ssn   登录人工号
+						 * @return array(
+						 *                et_state      状态： 1起草|2流程中|5审批完成
+						 *                et_createuser 起草人工号
+						 *                cs_id         当前环节id
+						 *                cs_updateby   最后处理人工号
+						 *                wf_uid        流程id
+						 *                cs_status     当前流程状态：Draft|Reject|Dealing|Underway|Routing
+						 *                isCreateUser  是否起草人：true|false
+						 *               )
+						 */
+						$workflow = $workflow->getWorkFlow($etuid, $ssn);
+						
+						/**
+						 * 查询审批日志信息
+						 * @param $etuid 实例id
+						 * @return array(
+						 *               u_name    姓名
+						 *               comment   审批意见
+						 *               wf_status 审批状态
+						 * )
+						 */
+						$logs = $workflow->queryWorkflowLog($etuid);//(实例id)
+					</pre>
+					<h5>4、工作流调用：</h5>
+					<pre class="brush:php">
+						//保存单据，调用工作流信息
+						$etuid = request ( 'etuid' );
+						$actionid = request ( '__actionid' );
+						require_once FCPATH . 'ltworkflow/workflow.php';
+						$workflow = new workflow();
+						$config['etuid'] = $etuid;//实例id
+						$config['wfuid'] = $wfuid;//流程id
+						$config['actionid'] = $actionid;//动作id
+						$config['ssn'] = $ssn;//登录人工号
+						/**
+						 *  处理流程
+						 *  @param $config['etuid'];	实例ID（必填）
+						 *  @param $config['wfuid'];	流程ID（必填）
+						 *	@param $config['actionid'];当前动作ID（必填）
+						 *	@param $config['ssn'];	   当前登录人工号（必填）
+						 *	@param $config['name']; 当前登录人姓名
+						 *	@param $config['router'];会签人工号（会签时必填）
+						 *	@param $config['comment'];审批意见
+						 *	@param $config['accredit'];授权人工号
+						 *	@param $config['orguser'];按此工号组织结构审批，为空时按起草人组织结构审批
+						 *  @return array(
+						 *                status     状态  success|error|reject|confirm
+						 *                message    提示消息
+						 *                flowstatus 流程状态  Submit|Dealing|Reject|Recycle|Routing|finished
+						 *                nextuser array(
+						 *                				 u_name     姓名
+						 *                				 u_usercode 工号
+						 *                				 u_email    邮箱
+						 *                               )
+						 *               )
+						 */
+						$resarray = $workflow->doAction($config);
+					</pre>
+					
+				</div>
+			</div>
+		<div>
+	</div>
+		
+</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+</script>

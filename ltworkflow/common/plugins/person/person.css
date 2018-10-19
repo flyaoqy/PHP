@@ -1,0 +1,20 @@
+
+.select_list_person{
+	overflow-y:scroll;
+}
+
+.select_list_left{
+	padding-left:5px;
+	line-height:18px;
+	cursor:default;
+	white-space:nowrap;
+	-webkit-user-select:none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+
+.select_list_left_selected{
+	background-color:rgb(30,144,255);
+	color:white;
+}

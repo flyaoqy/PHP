@@ -1,0 +1,16 @@
+.jq_to_top_element{
+	position:fixed;
+	display:none;
+	outline:none;
+	width:45px;
+	padding: 6px 0px;
+	font-size:14px;
+	text-align:center;
+	border:1px solid transparent;
+	border-radius:4px;
+	background-color:rgb(58,162,247);
+	color:#fff;
+	cursor:pointer;
+	z-index:100;
+}
+

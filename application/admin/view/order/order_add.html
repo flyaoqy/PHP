@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="__STATIC__/admin/css/font.css">
+    <link rel="stylesheet" href="__STATIC__/admin/css/xadmin.css">
+	<link rel="stylesheet" href="__STATIC__/admin/lib/layui/css/layui.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="__STATIC__/admin/js/xadmin.js"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script language="javascript">
+		function checkContract() 
+		{
+		var msg = document.getElementById("contractMsg");
+		var f = document.contract_info;
+		var contractId = f.contract_id.value;
+		var url = "{:url('valid')}";
+		var postStr = "contract_id="+ contractId;
+        var ajax = false;
+        if(window.XMLHttpRequest){
+            ajax = new XMLHttpRequest();
+            if(ajax.overrideMimeType){
+                ajax.overrideMimeType("text/xml");
+            }
+        } else if(window.ActiveXObject){
+            try{
+            ajax = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e){
+                try{
+                   ajax = new ActiveXObject("Microsoft.XMLHTTP");
+                } catch(e){}
+            }
+
+        }
+        if (!ajax){ // 异常，创建对象实例失败
+                 window.alert("不能创建XMLHttpRequest对象实例.");
+                 return false;
+        }
+        ajax = new XMLHttpRequest();
+        //开始初始化XMLHttpRequest对象
+        
+		ajax.open("POST", url, true);
+		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		ajax.send(postStr);
+		ajax.onreadystatechange = function() { 
+            if (ajax.readyState === 4 && ajax.status === 200) {
+            msg.innerHTML = ajax.responseText;
+            msg.style.color = "#ff0000";
+	        console.log(ajax.responseText);
+           } 
+        }	
+	}
+	</script>
+  </head>
+  <body>
+    <div class="x-body">
+        <form class="layui-form" name="contract_info" enctype="multipart/form-data" method="POST" action="{:url('save')}">
+          <div class="layui-form-item">
+              <label for="contract_id" class="layui-form-label">
+                  <span class="x-red">*</span>合同编号
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="contract_id" name="contract_id" required="" lay-verify="contract_id"
+                  autocomplete="off" class="layui-input" onblur="checkContract()">
+                  <span id="contractMsg"></span>
+              </div>
+			  <div class="layui-form-mid layui-word-aux">
+                  <span class="x-red">*</span>请输入6位数字或字母组合，且为唯一值
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label for="type" class="layui-form-label">
+                  <span class="x-red">*</span>合同类型
+              </label>
+              <div class="layui-input-inline">
+                  <select id="type" name="type" class="valid">
+                    <option id="zxht">租销合同</option>
+                  </select>
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label for="name" class="layui-form-label">
+                  <span class="x-red">*</span>合同名称
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="name" name="name" required="" lay-verify="required"
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label for="company_name" class="layui-form-label">
+                  <span class="x-red">*</span>商户名称
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="company_name" name="company_name" required="" lay-verify="required"
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+		  <div class="layui-form-item">
+              <label for="code" class="layui-form-label">
+                  <span class="x-red">*</span>商户代码
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="code" name="code" required="" lay-verify="code" autocomplete="off" class="layui-input">
+              </div>
+			  <div class="layui-form-mid layui-word-aux">
+                  <span class="x-red">*</span>请输入4位数字
+              </div>
+          </div>
+    
+		  <div class="layui-form-item">
+              <label for="belonger" class="layui-form-label">
+                  <span class="x-red">*</span>所属招商人员
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="belonger" name="belonger" required="" lay-verify="required"
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+		  <div class="layui-form-item">
+              <label for="brand" class="layui-form-label">
+                  <span class="x-red">*</span>品牌
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="brand" name="brand" required="" lay-verify="required"
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+		  <div class="layui-form-item">
+              <label for="retail_format" class="layui-form-label">
+                  <span class="x-red">*</span>业态名称
+              </label>
+              <div class="layui-input-inline">
+                  <select id="retail_format" name="retail_format">
+				     <option name="retail_format" value="主次力店">主次力店</option>
+                     <option name="retail_format" value="精品配套">精品配套</option>
+					 <option name="retail_format" value="服装服饰">服装服饰</option>
+					 <option name="retail_format" value="餐饮美食">餐饮美食</option>
+					 <option name="retail_format" value="休闲娱乐">休闲娱乐</option>
+                  </select>
+              </div>
+          </div>
+		  <div class="layui-form-item">
+              <label for="berth_number" class="layui-form-label">
+                  <span class="x-red">*</span>铺位号
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="berth_number" name="berth_number" required="" lay-verify="required"
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+		  <div class="layui-form-item">
+              <label for="payment_method" class="layui-form-label">
+                  <span class="x-red">*</span>结账方式
+              </label>
+              <div class="layui-input-inline">
+                    <select id="payment_method" name="payment_method" class="valid">
+                    <option name="payment_method" value="月度结算">月度结算</option>
+                    <option name="payment_method" value="季度结算">季度结算</option>
+					<option name="payment_method" value="半年结算">半年结算</option>
+					<option name="payment_method" value="整年结算">整年结算</option>
+                    </select>
+              </div>
+          </div>
+		  <div class="layui-form-item">
+              <label for="startdate" class="layui-form-label">
+                  <span class="x-red">*</span>合同开始时间
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="startdate" name="startdate" required="" lay-verify="date"
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+		  <div class="layui-form-item">
+              <label for="enddate" class="layui-form-label">
+                  <span class="x-red">*</span>合同结束时间
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="enddate" name="enddate" required="" lay-verify="date"
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+		  
+          <div class="layui-form-item">
+              <label for="upload" class="layui-form-label">
+                  <span class="x-red">*</span>合同附件
+              </label>
+              <div class="layui-input-inline">
+                  <input type="file" id="upload" name="upload" required="" autocomplete="off" class="layui-input">
+              </div>
+			  <div class="layui-form-mid layui-word-aux">
+                  <span class="x-red">*</span>请上传商户合同（格式：pdf、docx、doc）
+              </div>
+          </div>
+		  
+          <div class="layui-form-item layui-form-text">
+              <label for="description" class="layui-form-label">
+                  描述
+              </label>
+              <div class="layui-input-block">
+                  <textarea placeholder="请输入内容" id="description" name="description" class="layui-textarea"></textarea>
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label for="add" class="layui-form-label">
+              </label>
+              <button  class="layui-btn" lay-filter="add" lay-submit="" id='add' type='submit'>
+                  增加
+              </button>
+          </div>
+      </form>
+    </div>
+    <script>
+	
+	  layui.use('laydate', function(){
+        let laydate = layui.laydate;
+        
+        //执行一个laydate实例
+        laydate.render({
+          elem: '#startdate' //指定元素
+        });
+
+        //执行一个laydate实例
+        laydate.render({
+          elem: '#enddate' //指定元素
+        });
+      });
+		
+        layui.use(['form','layer'], function(){
+            $ = layui.jquery;
+          let form = layui.form
+          ,layer = layui.layer;
+        
+          //自定义验证规则
+          form.verify({
+            nikename: function(value){
+              if(value.length < 5){
+                return '昵称至少得5个字符啊';
+              }
+            }
+			,contract_id: [/^[a-zA-Z0-9]{6}$/,'必须是6位数字或字母组合']
+			,code: [/^[0-9]{4}$/,'必须是4位数字']
+            ,pass: [/(.+){6,12}$/, '密码必须6到12位']
+            ,repass: function(value){
+                if($('#L_pass').val()!=$('#L_repass').val()){
+                    return '两次密码不一致';
+                }
+            }
+          });                
+        });
+    </script>
+  </body>
+
+</html>

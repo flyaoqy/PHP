@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="shortcut icon" href="__STATIC__/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="__STATIC__/admin/css/font.css">
+    <link rel="stylesheet" href="__STATIC__/admin/css/xadmin.css">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="__STATIC__/admin/lib/layui/css/layui.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="__STATIC__/admin/js/xadmin.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script>
+        layui.use('laydate', function(){
+        var laydate = layui.laydate;
+            laydate.render({
+            elem: '#start' 
+            });
+        laydate.render({
+            elem: '#end' 
+            });
+        });
+     
+        layui.use('table', function(){
+        var table = layui.table;
+        });
+    </script>
+  </head>
+  <script>
+      let index = parent.layer.getFrameIndex(window.name);
+      parent.layer.close(index);
+      parent.location.reload();
+  </script>
+  <body>
+    <div class="x-nav">
+      <span class="layui-breadcrumb">
+        <a href="">首页</a>
+        <a href="javascript:location.replace('check')">财务管理</a>
+        <!--<a><cite>商户列表</cite></a>-->
+      </span>
+      <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace('check')" title="刷新">
+        <i class="layui-icon" style="line-height:30px">ဂ</i></a> <!--注意location.replace('index')写法-->
+    </div>
+    <div class="x-body">
+      <div class="layui-row">
+        <form class="layui-form layui-col-md12 x-so" type="POST" action="{:url('query')}">
+            <div class="layui-input-inline">
+                <select name="type">
+                    <option value="">请选择费用名称</option>
+                    <option value='水费'>水费</option>
+                    <option value='电费'>电费</option>
+                    <option value='燃气费'>燃气费</option>
+                    <option value='物业费'>物业费</option>
+                    <option value='固定租金'>固定租金</option>
+                    <option value='抽成租金'>抽成租金</option>
+                    <option value='广告场租费'>广告场租费</option>
+                    <option value='场地使用费'>场地使用费</option>
+                    <option value='装修保证金'>装修保证金</option>
+                    <option value='其他扣款项'>其他扣款项</option>
+                </select>
+            </div>
+		  <input type="text" id="brand" name="brand"  placeholder="请输入品牌名称" autocomplete="off" class="layui-input">
+            <div class="layui-input-inline">
+                <select name="direction">
+                    <option value="">请选择费用名称</option>
+                    <option value='0'>收款</option>
+                    <option value='1'>付款</option>
+                </select>
+            </div>
+          <button class="layui-btn"  lay-submit="" lay-filter="sreach" id="thesearch" type="submit"><i class="layui-icon">&#xe615;</i></button>
+        </form>
+      </div>
+      <xblock>
+        <span class="x-right" style="line-height:40px">共有数据：{$count} 条</span>
+      </xblock>
+	  </div>
+      <table class="layui-table" lay-data="" lay-size="sm"> <!--lay-size -->
+        <thead>
+          <tr>
+            <th lay-data="{field:'id',width:60,sort: true}">ID</th>
+            <th lay-data="{field:'contract_id',width:80}">合同编号</th>
+            <th lay-data="{field:'company_name',width:230}">商户名称</th>
+			<th lay-data="{field:'brand',width:120}">品牌名称</th>
+			<th lay-data="{field:'start_date',width:100,sort: true}">起始时间</th>
+			<th lay-data="{field:'end_date',width:100,sort: true}">截至时间</th>
+            <th lay-data="{field:'type',width:110,sort: true}">费用名称</th>
+            <th lay-data="{field:'direction',width:60,sort: true}">方向</th>
+			<th lay-data="{field:'received_price',width:110,sort: true}">金额(元)</th>
+			<th lay-data="{field:'real_date',width:100,sort: true}">发生时间</th>
+			<th lay-data="{field:'operate_time',width:150,sort: true}">操作时间</th>
+        </thead>
+        <tbody>
+		{volist name='account_check' id='vo'} <!--name属性表示模板赋值的变量名称，因此不可随意在模板文件中改变。
+		id表示当前的循环变量，可以随意指定，但确保不要和name属性冲突-->
+          <tr>
+            <td>{$vo.id}</td>
+            <td>{$vo.contract_id}</td>
+			<td>{$vo.company_name}</td>
+			<td>{$vo.brand}</td>
+            <td>{$vo.start_date}</td>
+            <td>{$vo.end_date}</td>
+            <td>{$vo.type}</td>
+            {if condition="$vo.direction==0"}
+                <td>收款</td>
+            {/if}
+            {if condition="$vo.direction==1"}
+                <td>付款</td>
+            {/if}
+            <td>{$vo.received_price}</td>
+			<td>{$vo.real_date}</td>
+			<td>{$vo.operate_time}</td>
+          </tr>
+        {/volist}
+        </tbody>
+        </table>
+           <xblock>
+             <span class="x-right" style="line-height:40px">费用总计：{$fee} 元</span>
+           </xblock>
+	    <div style="padding-top:10px ">
+	      {$account_check->render()}
+	    </div>
+  </body>
+</html>

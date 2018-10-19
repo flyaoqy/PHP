@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wftest>
+	<!-- 工作流引擎本门 new,old -->
+	<engine_version>new</engine_version>
+	<!-- 测试单据的实例id  -->
+	<etuid>4D6BE055-18E4-6054-317B-EF38C3B45987</etuid>
+	<!-- 流程配置xml历史版本，如果取默认配置为空就行，id：t_wf_workflow_xmllog的wfuid列，version：t_wf_workflow_xmllog的id列， -->
+	<wf_config id="8B6A7C77-3A14-4729-8990-0F128A2CAC42">
+		<version>124</version>
+	</wf_config>
+	<!-- 对sql查询的缓存，是否1,0 -->
+	<cache_config>
+		<enable>1</enable>
+		<exclude>t_service_purch</exclude><!-- 不缓存的表，多个逗号分隔 -->
+	</cache_config>
+	<!-- 修改表字段，测试不同流程 -->
+	<table name="t_service_purch" keycol="sp_uid" keyvalue="4D6BE055-18E4-6054-317B-EF38C3B45987">	
+		<!-- 起草人列，必需定义 -->
+		<columns name="sp_createuser" type="string" descript="起草人" authoruser="1">
+			<value>20980,WGD0059</value>
+		</columns>
+		<columns name="sp_budget_total" type="num" descript="金额">
+			<value>10000,100000,200000,1000000</value>
+		</columns>
+		<columns name="sp_budgettype" type="string" descript="预算类型">
+			<value>销售成本-游戏,个人费用</value>
+		</columns>
+		<columns name="sp_main_signer" type="string" descript="主签约单位">
+			<value>SSEM,XLWZ</value>
+		</columns>
+		<columns name="sp_advanceflag" type="num" descript="预提费用">
+			<value>0,1</value>
+		</columns>	
+		<columns name="sp_law1_flag" type="num" descript="法务一审">
+			<value>0,1</value>
+		</columns>		
+		<columns name="sp_law2_flag" type="num" descript="法务二审">
+			<value>0,1</value>
+		</columns>
+		<columns name="sp_cfo_flag" type="num" descript="法务CFO标记">
+			<value>0,1</value>
+		</columns>
+		<columns name="sp_ceo_flag" type="num" descript="法务CEO标记">
+			<value>0,1</value>
+		</columns>
+		<columns name="sp_fina_cfo_flag" type="num" descript="财务CFO标记">
+			<value>0,1</value>
+		</columns>
+		<columns name="sp_fina_ceo_flag" type="num" descript="财务CEO标记">
+			<value>0,1</value>
+		</columns>
+	</table>
+</wftest>
